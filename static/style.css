@@ -1,0 +1,70 @@
+body {
+    background-color: #dfecf7;
+    color: #2a3238;
+    margin-bottom: 20px;
+    
+}
+
+.text-center {
+    margin-top: 40px;
+}
+
+.container {
+    margin-top: 0px;
+    max-width: 75%;
+}
+
+.card {
+    box-shadow: 0 2px 3px #3b494f1a;
+    border-radius: 15px;
+    border: none;
+    position: relative;
+}
+
+.card-title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #2a3238;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    border-radius: 8px;
+}
+
+.btn-primary {
+    background-color: #1d82ee;
+    border: 0;
+}
+
+.btn-primary:hover {
+    background-color: #0b6dd6;
+    border: 0;
+}
+
+.criteria-card {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 3px #3b494f1a;
+}
+
+.dropdown-content {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+  
