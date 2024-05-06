@@ -1,8 +1,19 @@
 body {
-    background-color: #dfecf7;
+    background-color: #eeeeee;
     color: #2a3238;
     margin-bottom: 20px;
-    
+}
+
+h3 {
+    font-size: 110%;
+    color: #434445;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 8px;
+}
+
+h5 {
+    font-size: 110%;
 }
 
 .text-center {
@@ -15,8 +26,8 @@ body {
 }
 
 .card {
-    box-shadow: 0 2px 3px #3b494f1a;
-    border-radius: 15px;
+    box-shadow: 0 3px 3px #3b494f1a;
+    border-radius: 5px;
     border: none;
     position: relative;
 }
@@ -29,7 +40,7 @@ body {
 
 .btn {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 2px;
     border-radius: 8px;
 }
@@ -67,4 +78,3 @@ body {
     top: 15px;
     right: 20px;
 }
-  

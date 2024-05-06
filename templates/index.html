@@ -10,33 +10,30 @@
 <body>
     <h1 class="text-center">Cars</h1> 
     <div class="container"> <!-- Displays list of cars -->
-        <div class="row justify-content-center">
-            {% for car in cars %} 
-            <div class="col-md-6">
+        <div class="row">
+            <!-- Organise cars in columns by status of inspection -->
+            {% for status, color in [(0, 'red'), (1, 'yellow'), (2, 'green')] %}
+            <div class="col-md-4">
+                <h3 class="text-start">
+                    {% if status == 0 %}
+                    Not Inspected
+                    {% elif status == 1 %}
+                    Inspection in Progress
+                    {% else %}
+                    Inspected
+                    {% endif %}
+                </h3>
+                <!-- Gets all cars of that status -->
+                {% for car in cars if car[2] == status %} 
                 <div class="card mt-3">
                     <!-- Colored circle for inspection status -->
-                    <div class="status-indicator" style="background-color:
-                        {% if car[2] == 0 %}
-                        red;    <!-- Not inspected yet-->
-                        {% elif car[2] == 1 %}
-                        yellow; <!-- Inspecting -->
-                        {% else %}
-                        green;  <!-- Inspected -->
-                        {% endif %}
-                    ">
-                    </div>
-                
+                    <div class="status-indicator" style="background-color: {{ color }};"></div>
                     <div class="card-body">
                         <h5 class="card-title">{{ car[1] }}</h5>
-                        {% if car[2] == 0 %} <!-- Checks inspection status -->
-                            <button class="btn btn-primary" onclick="window.location.href='/inspection_results/{{ car[0] }}'">Not inspected</button>
-                        {% elif car[2] == 1 %}
-                            <button class="btn btn-primary" onclick="window.location.href='/inspection_results/{{ car[0] }}'">Inspection in progress</button>
-                        {% else %}
-                            <button class="btn btn-primary" onclick="window.location.href='/inspection_results/{{ car[0] }}'">Inspected</button>
-                        {% endif %}
+                        <button class="btn btn-primary" onclick="window.location.href='/inspection_results/{{ car[0] }}'">Inspect</button>
                     </div>
                 </div>
+                {% endfor %}
             </div>
             {% endfor %}
         </div>
